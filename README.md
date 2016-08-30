@@ -1,32 +1,12 @@
 # MinimalHomotopy
-["Measuring Similarity Between Curves on 2-Manifolds via Homotopy Area"] (https://github.com/CrikeeIP/MinimalHomotopy/blob/master/background/ChambersWang_article.pdf) is a paper published by Erin Wolf Chambers and Yusu Wang in 2013. Here we apply their results to polygons in the plane.
+["Measuring Similarity Between Curves on 2-Manifolds via Homotopy Area"] (https://github.com/CrikeeIP/MinimalHomotopy/blob/master/background/ChambersWang_article.pdf) is a paper published by Erin Wolf Chambers and Yusu Wang in 2013. Here we apply their results to polygons in the plane to measure their similarity.
 
 ##Introduction
-This repository is home to a **C++** implementation of the algorithm as described by Chambers and Wang.
-The aim is, to measure the similarity between two curves (i.e. polygons) **P**, **Q**  in the plane.
+This repository is home to a **C++** implementation of the algorithm described by Chambers and Wang.
+The aim is to measure the similarity between two curves (i.e. polygons) **P**, **Q**  in the plane R^2. This measure will be the *minimal homotopy area*, i.e. the minimal area necessary to sweep while continuously deforming **P** into **Q** (and vice versa).
 
-To that end, we investigate the closed curve **P°rev(Q)** (where rev(Q) is is simply Q reversed).
+To that end, we investigate the closed curve **l = P°rev(Q)** (where rev(Q) is is simply **Q** reversed, and ° is the concatenation). The curve **l** divides the plane into several areas or "faces" **f_i**. Let **A(f_i)** the area of **f_i** and **w(f_i)** the winding number of **l** around **f_i**. As Chambers/Wang proved, the sum over the products **A(f_i) * w(f_i)** can be minimized in a certain way to obtain the minimal homotopy area.
 
-
-Restrictions are, that both curves be non self-intersecting and share the same start and end point.
-
-For further explanation on how the algorithm works, see the original [paper] (https://github.com/CrikeeIP/MinimalHomotopy/blob/master/background/ChambersWang_article.pdf). 
-
-##Usage
-Suppose you have a set of points in R^n, described in cartesion coordinates, and wonder if they have a cluster structure.
-Then you might consider using this library, as it offers an interface that lets you draw a [reachability-plot](https://github.com/CrikeeIP/OPTICS-Clustering/blob/master/resources/reachabilityplot.png) with two lines of code:
-
-```cpp
-#include <optics.h>
-
-typedef std::vector<double> point; //A list of n cartesian coordinates makes a point
-std::vector<point> points; //Your list of points goes here
-
-int main(){
-   auto reach_dists = optics::compute_reachability_dists( points, 10, 100 );
-   optics::draw_reachability_plot( reach_dists, "D:/reachdists.bmp" );
-}
-```
 
 ##Restrictions
 
@@ -37,7 +17,6 @@ int main(){
 Three lightweight header-only libraries:  
 1. [Geometry](https://github.com/CrikeeIP/Geometry)  
 2. [FunctionalPlus](https://github.com/Dobiasd/FunctionalPlus)  
-3. [CImg](https://github.com/dtschump/CImg)
 
 And boost (::geometry and ::index, to be exact)  
 4. [Boost](http://www.boost.org/)
