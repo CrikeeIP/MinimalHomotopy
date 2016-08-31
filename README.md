@@ -22,9 +22,5 @@ Two lightweight header-only libraries:
 And boost (::geometry and ::index, to be exact)  
 4. [Boost](http://www.boost.org/)
 
-
-##Disclaimer
-The functionality of this library initially grew due to my personal need for it while using C++ on a regular basis. I try my best to make it error-free and as comfortable to use as I can. The API might still change in the future. If you have any suggestions, find errors, miss some functions or want to give general feedback/criticism, I'd love to hear from you. Of course, [contributions](https://github.com/CrikeeIP/OPTICS-Clustering/pulls) are also very welcome.
-
 ##License
-Distributed under the Boost Software License, Version 1.0. (See accompanying file LICENSE or copy at http://www.boost.org/LICENSE_1_0.txt)
+Distributed under the *MIT Software License* (X11 license). (See accompanying file LICENSE.)
