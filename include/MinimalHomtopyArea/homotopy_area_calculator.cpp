@@ -1,10 +1,7 @@
 // Copyright Ingo Proff 2016.
-// https://github.com/CrikeeIP/Spielwiese
-// Distributed under the Boost Software License, Version 1.0.
-// (See accompanying file LICENSE_1_0.txt or copy at
-//  http://www.boost.org/LICENSE_1_0.txt)
-
-
+// https://github.com/CrikeeIP/MinimalHomotopy
+// Distributed under the MIT Software License (X11 licnse).
+// (See accompanying file LICENSE)
 
 #include <iostream>
 #include <assert.h>
@@ -306,7 +303,7 @@ embedded_graph create_embedded_graph( const polygon& p1, const polygon& p2, cons
 }
 
 
-//Concats the sub-polygons between intersect1 and intersect2, to a closed polygon p1 ° rev(p2)
+//Concats the sub-polygons between intersect1 and intersect2, to a closed polygon p1 Â° rev(p2)
 polygon p1_rev_p2( const polygon& p1, const polygon& p2, const std::size_t intersect1, const std::size_t intersect2 ) {
 	polygon q;
 	for ( std::size_t v = intersection_indices[intersect1].first; v <= intersection_indices[intersect2].first; v++ ) {
@@ -514,7 +511,7 @@ bool valid_intersection( std::size_t intersect1, std::size_t intersect2) {
 
 double global_min = DBL_MAX;
 
-//Recursive function, which computes the total winding number (TW) of Q := p1°rev(p2) by splitting Q at its anchor points and summing up the TWs of the parts
+//Recursive function, which computes the total winding number (TW) of Q := p1Â°rev(p2) by splitting Q at its anchor points and summing up the TWs of the parts
 double decompose_at_anchor_points( const polygon& p1, const polygon& p2, std::size_t intersect1, std::size_t intersect2, double current_homotopy_area) {
 	assert(( 0 <= intersect1) && (intersect1 < intersect2) && (intersect2 < intersection_indices.size()) );
 	if ( current_homotopy_area > global_min ) { return 0.0; }
