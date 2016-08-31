@@ -1,9 +1,7 @@
 // Copyright Ingo Proff 2016.
-// https://github.com/CrikeeIP/Spielwiese
-// Distributed under the Boost Software License, Version 1.0.
-// (See accompanying file LICENSE_1_0.txt or copy at
-//  http://www.boost.org/LICENSE_1_0.txt)
-
+// https://github.com/CrikeeIP/MinimalHomotopy
+// Distributed under the MIT Software License (X11 license).
+// (See accompanying file LICENSE)
 
 #pragma once
 
