@@ -1,4 +1,4 @@
-# MinimalHomotopy
+# MinimalHomotopy (UNDER CONSTRUCTION)
 ["Measuring Similarity Between Curves on 2-Manifolds via Homotopy Area"] (https://github.com/CrikeeIP/MinimalHomotopy/blob/master/background/ChambersWang_article.pdf) is a paper published by Erin Wolf Chambers and Yusu Wang in 2013. Here we apply their results to polygons in the plane to measure their similarity.
 
 ##Introduction
